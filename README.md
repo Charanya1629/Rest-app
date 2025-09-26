@@ -50,74 +50,89 @@ You’ll see:
 Open your browser → http://127.0.0.1:5000/
 
 # API Endpoints
-🔹 Home
+# Home
 
 GET /
 
 { "message": "Welcome to User Management API" }
 
-🔹 Create User
+# Create User
 
 POST /users
 
 Body (JSON):
 
 {
+
   "name": "Alice",
-  "email": "alice@example.com"
+  
+   "email": "alice@example.com"
+    
 }
 
 
 Response:
 
 {
-  "id": "1",
-  "name": "Alice",
-  "email": "alice@example.com"
-}
 
-🔹 Get All Users
+    "id": "1",
+   
+    "name": "Alice",
+    
+    "email": "alice@example.com"
+  
+}
+# Get All Users
 
 GET /users
 
 Response:
 
 [
+
   {
-    "id": "1",
-    "name": "Alice",
-    "email": "alice@example.com"
+  
+     "id": "1", 
+ 
+     "name": "Alice",
+
+     "email": "alice@example.com"
+  
   }
+  
 ]
 
-🔹 Get Single User
+# Get Single User
 
 GET /users/<id>
 Example: /users/1
 
-🔹 Update User
+# Update User
 
 PUT /users/<id>
 
 Body (JSON):
 
 {
-  "name": "Alice Updated",
-  "email": "newalice@example.com"
+
+     "name": "Alice Updated",
+
+     "email": "newalice@example.com"
+  
 }
 
-🔹 Delete User
+# Delete User
 
 DELETE /users/<id>
 
 Response:
 
-{ "message": "User deleted" }
+    { "message": "User deleted" }
 
 # Testing
 Using cURL
 # Create user
-curl -X POST http://127.0.0.1:5000/users -H "Content-Type: application/json" -d "{\"name\":\"Bob\",\"email\":\"bob@example.com\"}"
+curl -X POST http://127.0.0.1:5000/users -H "Content-Type: application/json" -d "     {\"name\":\"Bob\",\"email\":\"bob@example.com\"}"
 
 # Get users
 curl http://127.0.0.1:5000/users
